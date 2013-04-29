@@ -1,6 +1,4 @@
 dotfiles
 ========
 
-My dotfiles, inspired by great people.
-
-See: http://dotfiles.github.io/
+My dotfiles. Inspired by great people: http://dotfiles.github.io/
