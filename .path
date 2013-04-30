@@ -1,2 +1,5 @@
+#user bin
+export PATH="~/bin:$PATH"
+
 #heroku
 export PATH="/usr/local/heroku/bin:$PATH"
