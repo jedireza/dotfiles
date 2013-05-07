@@ -1,0 +1,10 @@
+[user]
+	name = Reza Akhavan
+	email = jedireza@gmail.com
+[mergetool]
+	keepBackup = true
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	ui = auto
