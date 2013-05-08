@@ -10,7 +10,7 @@ git submodule update
 
 # Sync files to ~
 function syncUp() {
-  rsync --exclude "adobe-ps-ico-plugin/" --exclude ".git/" --exclude ".DS_Store" --exclude "install.sh" --exclude "README.md" -av . ~
+  rsync --exclude "terminal/" --exclude "adobe-ps-ico-plugin/" --exclude ".git/" --exclude ".DS_Store" --exclude "install.sh" --exclude "README.md" -av . ~
 }
 
 # Warn of overwrites
