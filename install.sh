@@ -8,9 +8,17 @@ git pull origin master
 git submodule init
 git submodule update
 
-# Sync files to ~
+# Sync files
 function syncUp() {
-  rsync --exclude "terminal/" --exclude "adobe-ps-ico-plugin/" --exclude ".git/" --exclude ".DS_Store" --exclude "install.sh" --exclude "README.md" -av . ~
+  # Sync files to ~
+  rsync --exclude "sublime/" --exclude "terminal/" --exclude "adobe-ps-ico-plugin/" --exclude ".git/" --exclude ".DS_Store" --exclude "install.sh" --exclude "README.md" -av . ~
+  
+  # Sync sublime settings
+  sublPath=~/Library/Application\ Support/Sublime\ Text\ 2/
+  if [ -d "$sublPath" ]
+  then
+    rsync -av ./sublime/ "$sublPath"
+  fi
 }
 
 # Warn of overwrites
