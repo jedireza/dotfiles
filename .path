@@ -1,5 +1,8 @@
 #user bin
 export PATH="~/bin:$PATH"
 
+#mysql bin
+export PATH="/usr/local/mysql/bin:$PATH"
+
 #heroku
 export PATH="/usr/local/heroku/bin:$PATH"
