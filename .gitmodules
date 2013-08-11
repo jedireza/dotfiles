@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/jade"]
 	path = .vim/bundle/jade
 	url = git://github.com/digitaltoad/vim-jade.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = git@github.com:robbyrussell/oh-my-zsh.git

@@ -1,5 +1,5 @@
 #user bin
-export PATH="~/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 #mysql bin
 export PATH="/usr/local/mysql/bin:$PATH"
