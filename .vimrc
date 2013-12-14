@@ -165,3 +165,7 @@ function! s:unite_settings()
 endfunction
 autocmd FileType unite call s:unite_settings()
 
+" ------------------------------------------------------------------------------
+" Mark Down 
+" ------------------------------------------------------------------------------
+let g:vim_markdown_folding_disabled=1
