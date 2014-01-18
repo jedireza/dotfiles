@@ -60,6 +60,10 @@ nnoremap <C-H> <C-W><C-H>
 " Show vertical ruler at 100th column
 set colorcolumn=100
 
+" Easiser navigation between tabs
+nmap t gt
+nmap T gT
+
 " Easier way to move lines
 if has('mac')
   nnoremap ∆ :m+<CR>==
@@ -131,10 +135,10 @@ set cursorline
 " Spaces instead of tabs
 set expandtab
 
-" 2 spaces for each tab
+" X spaces for each tab
 set tabstop=2
 
-" 2 spaces for indention
+" X spaces for indention
 set shiftwidth=2
 
 " ------------------------------------------------------------------------------
