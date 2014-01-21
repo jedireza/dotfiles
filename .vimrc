@@ -60,7 +60,7 @@ nnoremap <C-H> <C-W><C-H>
 " Show vertical ruler at 100th column
 set colorcolumn=100
 
-" Easiser navigation between tabs
+" Easier navigation between tabs
 nmap t gt
 nmap T gT
 
