@@ -2,3 +2,4 @@ shell "/usr/local/bin/zsh"
 term screen-256color
 altscreen on
 caption always "%{= kw}%-w%{= GW}%n %t%{-}%+w %-= @%H - %LD %d %LM - %c"
+startup_message off
