@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/dustjs"]
 	path = .vim/bundle/dustjs
 	url = git://github.com/jimmyhchan/dustjs.vim.git
+[submodule ".vim/bundle/vim-jshint2"]
+	path = .vim/bundle/vim-jshint2
+	url = git@github.com:Shutnik/jshint2.vim.git
