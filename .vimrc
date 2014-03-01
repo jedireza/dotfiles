@@ -61,8 +61,10 @@ nnoremap <C-H> <C-W><C-H>
 set colorcolumn=100
 
 " Easier navigation between tabs
-nmap t gt
-nmap T gT
+nmap <C-]> gt
+nmap <C-[> gT
+" nmap t gt
+" nmap T gT
 
 " Easier way to move lines
 if has('mac')
