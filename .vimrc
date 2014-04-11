@@ -124,7 +124,7 @@ colorscheme distinguished
 " set nowrap
 
 " Highlight current line
-set cursorline
+" set cursorline
 
 " Show “invisible” characters
 " set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
