@@ -159,7 +159,7 @@ let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -S -g ""
 let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts = '--line-numbers --nocolor --nogroup --hidden'
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_rank'])
+" call unite#filters#sorter_default#use(['sorter_rank'])
 call unite#set_profile('source/file_rec/async', 'ignorecase', 1)
 call unite#set_profile('source/file_rec/async', 'smartcase', 1)
 
