@@ -12,13 +12,6 @@ git submodule update
 function syncUp() {
   # Sync files to ~
   rsync --exclude ".nosync/" --exclude ".git/" --exclude ".DS_Store" --exclude "install.sh" --exclude "README.md" -av . ~
-  
-  # Sync sublime settings
-  sublPath=~/Library/Application\ Support/Sublime\ Text\ 2/
-  if [ -d "$sublPath" ]
-  then
-    rsync -av ./.nosync/sublime/ "$sublPath"
-  fi
 }
 
 # Warn of overwrites
