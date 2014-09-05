@@ -120,6 +120,9 @@ syntax on
 " Color Scheme
 colorscheme distinguished 
 
+" Syntastic options
+let g:syntastic_javascript_checkers = ['jshint']
+
 " Turn off line wrapping
 " set nowrap
 
