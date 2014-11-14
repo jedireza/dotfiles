@@ -80,7 +80,7 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
 	AAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFjZVYkY2xhc3NKMCAw
-	IDAgMC45ABABgALSEBESE1okY2xhc3NuYW1lWCRjbGFzc2VzV05TQ29sb3KiEhRYTlNP
+	IDAgMC44ABABgALSEBESE1okY2xhc3NuYW1lWCRjbGFzc2VzV05TQ29sb3KiEhRYTlNP
 	YmplY3RfEA9OU0tleWVkQXJjaGl2ZXLRFxhUcm9vdIABCBEaIy0yNztBSE5bYm1vcXaB
 	ipKVnrCzuAAAAAAAAAEBAAAAAAAAABkAAAAAAAAAAAAAAAAAAAC6
 	</data>
@@ -105,7 +105,7 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGGBlYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
 	AAGGoKQHCBESVSRudWxs1AkKCwwNDg8QVk5TU2l6ZVhOU2ZGbGFnc1ZOU05hbWVWJGNs
-	YXNzI0AqAAAAAAAAEBCAAoADVk1vbmFjb9ITFBUWWiRjbGFzc25hbWVYJGNsYXNzZXNW
+	YXNzI0AoAAAAAAAAEBCAAoADVk1vbmFjb9ITFBUWWiRjbGFzc25hbWVYJGNsYXNzZXNW
 	TlNGb250ohUXWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RobVHJvb3SAAQgRGiMt
 	Mjc8QktSW2JpcnR2eH+Ej5ifoqu9wMUAAAAAAAABAQAAAAAAAAAcAAAAAAAAAAAAAAAA
 	AAAAxw==
@@ -117,7 +117,7 @@
 	<key>Linewrap</key>
 	<true/>
 	<key>ProfileCurrentVersion</key>
-	<real>2.02</real>
+	<real>2.04</real>
 	<key>RunCommandAsShell</key>
 	<true/>
 	<key>SelectionColor</key>
@@ -155,8 +155,10 @@
 	<false/>
 	<key>VisualBell</key>
 	<true/>
+	<key>VisualBellOnlyWhenMuted</key>
+	<false/>
 	<key>columnCount</key>
-	<integer>110</integer>
+	<integer>140</integer>
 	<key>name</key>
 	<string>JediTerminal</string>
 	<key>rowCount</key>
