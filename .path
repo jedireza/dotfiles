@@ -1,6 +1,11 @@
 #user bin
 export PATH="$HOME/bin:$PATH"
 
+#nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+source ~/.nvm/nvm.sh
+
 #mysql bin
 export PATH="/usr/local/mysql/bin:$PATH"
 
