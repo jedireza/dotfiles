@@ -122,6 +122,7 @@ colorscheme distinguished
 
 " Syntastic options
 let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_html_tidy_ignore_errors = ['trimming empty <span>']
 
 " Turn off line wrapping
 " set nowrap
