@@ -47,7 +47,7 @@ call s:ColorDictParser({
 	\ , 'StatusLineNC'                : [    244,    232,           'none']
 	\
 	\ , 'LineNr'                      : [    243,    235,           'none']
-	\ , 'VertSplit'                   : [    240,    234,           'none']
+	\ , 'VertSplit'                   : [    235,    235,           'none']
 	\
 	\ , 'WildMenu'                    : [    234,    231,           'none']
 	\ , 'Directory'                   : [    143, 'none',           'bold']
