@@ -125,7 +125,7 @@ colorscheme my-distinguished
 
 " Syntastic options
 let g:syntastic_javascript_checkers = ['jsxhint']
-let g:syntastic_html_tidy_ignore_errors = ['trimming empty <span>', 'trimming empty <i>']
+let g:syntastic_html_tidy_ignore_errors = ['trimming empty <span>', 'trimming empty <i>', ' is not recognized!', 'discarding unexpected ']
 
 " Turn off line wrapping
 " set nowrap
