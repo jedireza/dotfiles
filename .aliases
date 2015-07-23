@@ -19,4 +19,4 @@ alias .....='cd ../../../..'
 alias npm-bin='PATH=$(npm bin):$PATH'
 
 #new tmux session named as the current directory
-alias tmuxme='tmux new -s $(echo ${PWD##*/} | sed "s/_/-/g")'
+alias tmuxme='tmux new -s $(echo ${PWD##*/} | sed "s/[_\.]/-/g")'
