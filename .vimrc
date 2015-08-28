@@ -127,6 +127,9 @@ colorscheme my-distinguished
 let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_html_tidy_ignore_errors = ['trimming empty <span>', 'trimming empty <i>', ' is not recognized!', 'discarding unexpected ']
 
+" l20n file syntax hack
+autocmd BufNewFile,BufRead *.l20n set syntax=html
+
 " Turn off line wrapping
 " set nowrap
 
