@@ -19,7 +19,7 @@ alias .....='cd ../../../..'
 alias npm-bin='PATH=$(npm bin):$PATH'
 
 #docker
-alias dockup='$(boot2docker shellinit)'
+alias dockerup='boot2docker up && $(boot2docker shellinit)'
 
 #new tmux session named as the current directory
 alias tmuxme='tmux new -s $(echo ${PWD##*/} | sed "s/[_\.]/-/g")'
