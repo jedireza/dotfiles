@@ -1,15 +1,9 @@
-[submodule ".vim/bundle/fugitive"]
-	path = .vim/bundle/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/bundle/colorschemes"]
-	path = .vim/bundle/colorschemes
-	url = https://github.com/flazz/vim-colorschemes.git
-[submodule ".vim/bundle/jade"]
-	path = .vim/bundle/jade
-	url = git://github.com/digitaltoad/vim-jade.git
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = git@github.com:robbyrussell/oh-my-zsh.git
+[submodule ".vim/bundle/jade"]
+	path = .vim/bundle/jade
+	url = git://github.com/digitaltoad/vim-jade.git
 [submodule ".vim/bundle/unite.vim"]
 	path = .vim/bundle/unite.vim
 	url = git@github.com:Shougo/unite.vim.git
@@ -22,15 +16,9 @@
 [submodule ".vim/bundle/vim-multiple-cursors"]
 	path = .vim/bundle/vim-multiple-cursors
 	url = git@github.com:terryma/vim-multiple-cursors.git
-[submodule ".vim/bundle/vim-sensible"]
-	path = .vim/bundle/vim-sensible
-	url = git@github.com:tpope/vim-sensible.git
 [submodule ".vim/bundle/vimproc"]
 	path = .vim/bundle/vimproc
 	url = git@github.com:Shougo/vimproc.vim.git
-[submodule ".vim/bundle/ag.vim"]
-	path = .vim/bundle/ag.vim
-	url = git@github.com:rking/ag.vim.git
 [submodule ".vim/bundle/vim-distinguished"]
 	path = .vim/bundle/vim-distinguished
 	url = git@github.com:Lokaltog/vim-distinguished.git
@@ -46,24 +34,12 @@
 [submodule ".vim/bundle/tcomment"]
 	path = .vim/bundle/tcomment
 	url = git@github.com:tomtom/tcomment_vim.git
-[submodule ".vim/bundle/dustjs"]
-	path = .vim/bundle/dustjs
-	url = git://github.com/jimmyhchan/dustjs.vim.git
-[submodule ".vim/bundle/vim-jshint2"]
-	path = .vim/bundle/vim-jshint2
-	url = git@github.com:Shutnik/jshint2.vim.git
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = git@github.com:scrooloose/syntastic.git
-[submodule ".vim/bundle/editorconfig"]
-	path = .vim/bundle/editorconfig
-	url = git@github.com:editorconfig/editorconfig-vim.git
-[submodule ".vim/bundle/gist-vim"]
-	path = .vim/bundle/gist-vim
-	url = git@github.com:mattn/gist-vim.git
-[submodule ".vim/bundle/webapi-vim"]
-	path = .vim/bundle/webapi-vim
-	url = git@github.com:mattn/webapi-vim.git
+[submodule ".vim/bundle/vim-sensible"]
+	path = .vim/bundle/vim-sensible
+	url = git@github.com:tpope/vim-sensible.git
 [submodule ".vim/bundle/vim-json"]
 	path = .vim/bundle/vim-json
 	url = git@github.com:elzr/vim-json.git
