@@ -169,13 +169,17 @@ nnoremap [unite]r :Unite -no-split buffer file_mru<CR>
 nnoremap [unite]g :Unite -no-split grep:.<CR>
 nnoremap [unite]o :Unite -no-split outline<CR>
 
-let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -S -g ""'
-let g:unite_source_grep_command = 'ag'
-let g:unite_source_grep_default_opts = '--line-numbers --nocolor --nogroup --hidden'
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--line-numbers --nocolor --nogroup --hidden'
+  let g:unite_source_grep_recursive_opt = ''
+  let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -g ""'
+endif
+
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 " call unite#filters#sorter_default#use(['sorter_rank'])
-call unite#set_profile('source/file_rec/async', 'ignorecase', 1)
-call unite#set_profile('source/file_rec/async', 'smartcase', 1)
+call unite#set_profile('source/file_rec/async', 'context.ignorecase', 1)
+call unite#set_profile('source/file_rec/async', 'context.smartcase', 1)
 
 " Exit with ESC. You must never call :quit from within a unite buffer
 function! s:unite_settings()
