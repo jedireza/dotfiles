@@ -119,6 +119,7 @@ set number
 
 " Enable syntax highlighting
 syntax on
+filetype on
 
 " Color Scheme
 colorscheme my-distinguished 
@@ -129,6 +130,9 @@ let g:syntastic_html_tidy_ignore_errors = ['trimming empty <span>', 'trimming em
 
 " l20n file syntax hack
 autocmd BufNewFile,BufRead *.l20n set syntax=html
+
+" treat .webapp like .json
+autocmd BufNewFile,BufRead *.webapp set filetype=json
 
 " Turn off line wrapping
 " set nowrap
