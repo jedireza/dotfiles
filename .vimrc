@@ -158,6 +158,12 @@ set tabstop=2
 set shiftwidth=2
 
 " ------------------------------------------------------------------------------
+" airline 
+" ------------------------------------------------------------------------------
+"
+let g:airline_powerline_fonts = 1
+
+" ------------------------------------------------------------------------------
 " Unite 
 " ------------------------------------------------------------------------------
 
@@ -165,6 +171,7 @@ nmap <space> [unite]
 " Pro-tip, from the Unite window hit <C-l> to refresh the cache
 " Unite-f for files, Unite-r for recents, Unite-g for grep
 nnoremap [unite]f :Unite -no-split -start-insert file_rec/async:!<CR>
+nnoremap [unite]s :Unite -no-split -start-insert file_rec/git:--cached:--others:--exclude-standard<CR>
 nnoremap [unite]r :Unite -no-split buffer file_mru<CR>
 nnoremap [unite]g :Unite -no-split grep:.<CR>
 nnoremap [unite]o :Unite -no-split outline<CR>
@@ -174,6 +181,7 @@ if executable('ag')
   let g:unite_source_grep_default_opts = '--line-numbers --nocolor --nogroup --hidden'
   let g:unite_source_grep_recursive_opt = ''
   let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -g ""'
+  " let g:unite_source_rec_git_command = 'git ls-tree --full-tree --name-only -r HEAD'
 endif
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
@@ -184,8 +192,8 @@ call unite#set_profile('source/file_rec/async', 'context.smartcase', 1)
 " Exit with ESC. You must never call :quit from within a unite buffer
 function! s:unite_settings()
     imap <buffer> <ESC> <Plug>(unite_exit)
-    imap <buffer> <C-j> <Plug>(unite_insert_leave)
-    nmap <buffer> <ESC> <Plug>(unite_exit)
+    " imap <buffer> <C-j> <Plug>(unite_insert_leave)
+    " nmap <buffer> <ESC> <Plug>(unite_exit)
 endfunction
 autocmd FileType unite call s:unite_settings()
 
