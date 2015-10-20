@@ -19,7 +19,9 @@ alias .....='cd ../../../..'
 alias npm-bin='PATH=$(npm bin):$PATH'
 
 #docker
-alias dockerup='boot2docker up && $(boot2docker shellinit)'
+alias dockerme-fxos='docker run -it --rm -v ~/projects/B2G:/B2G -v ~/projects/gaia:/gaia -v /dev/bus/usb:/dev/bus/usb -v ~/.ssh:/home/root/.ssh --net=host jedireza/fxos'
+alias dockerme-mongo-server='docker run --name mongodb -it --rm -v ~/data/mongodb:/data/db -p 27017:27017 mongo'
+alias dockerme-mongo-client="docker run -it --link mongodb:mongo --rm mongo sh -c 'exec mongo \"\$MONGO_PORT_27017_TCP_ADDR:\$MONGO_PORT_27017_TCP_PORT\"'"
 
 #new tmux session named as the current directory
 alias tmuxme='tmux new -s $(echo ${PWD##*/} | sed "s/[_\.]/-/g")'

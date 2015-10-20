@@ -2,6 +2,9 @@
 " General
 " ------------------------------------------------------------------------------
 
+" map a leader key
+let mapleader=","
+
 " Make Vim more useful
 set nocompatible
 
@@ -87,17 +90,6 @@ endif
 nnoremap Q @q
 
 " ------------------------------------------------------------------------------
-" NERDTree 
-" ------------------------------------------------------------------------------
-silent! nmap <C-p> :NERDTreeToggle<CR>
-silent! map <F3> :NERDTreeFind<CR>
-
-let g:NERDTreeMapActivateNode="<F3>"
-let g:NERDTreeMapPreview="<F4>"
-
-let NERDTreeShowHidden=1
-
-" ------------------------------------------------------------------------------
 " Searching
 " ------------------------------------------------------------------------------
 
@@ -122,7 +114,7 @@ syntax on
 filetype on
 
 " Color Scheme
-colorscheme my-distinguished 
+colorscheme my-distinguished
 
 " Syntastic options
 let g:syntastic_javascript_checkers = ['jsxhint']
@@ -158,47 +150,26 @@ set tabstop=2
 set shiftwidth=2
 
 " ------------------------------------------------------------------------------
-" airline 
+" airline
 " ------------------------------------------------------------------------------
-"
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " ------------------------------------------------------------------------------
-" Unite 
+" NERDTree
 " ------------------------------------------------------------------------------
-
-nmap <space> [unite]
-" Pro-tip, from the Unite window hit <C-l> to refresh the cache
-" Unite-f for files, Unite-r for recents, Unite-g for grep
-nnoremap [unite]f :Unite -no-split -start-insert file_rec/async:!<CR>
-nnoremap [unite]s :Unite -no-split -start-insert file_rec/git:--cached:--others:--exclude-standard<CR>
-nnoremap [unite]r :Unite -no-split buffer file_mru<CR>
-nnoremap [unite]g :Unite -no-split grep:.<CR>
-nnoremap [unite]o :Unite -no-split outline<CR>
-
-if executable('ag')
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--line-numbers --nocolor --nogroup --hidden'
-  let g:unite_source_grep_recursive_opt = ''
-  let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -g ""'
-  " let g:unite_source_rec_git_command = 'git ls-tree --full-tree --name-only -r HEAD'
-endif
-
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-" call unite#filters#sorter_default#use(['sorter_rank'])
-call unite#set_profile('source/file_rec/async', 'context.ignorecase', 1)
-call unite#set_profile('source/file_rec/async', 'context.smartcase', 1)
-
-" Exit with ESC. You must never call :quit from within a unite buffer
-function! s:unite_settings()
-    imap <buffer> <ESC> <Plug>(unite_exit)
-    " imap <buffer> <C-j> <Plug>(unite_insert_leave)
-    " nmap <buffer> <ESC> <Plug>(unite_exit)
-endfunction
-autocmd FileType unite call s:unite_settings()
+silent! nmap <c-t> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 " ------------------------------------------------------------------------------
-" Mark Down 
+" ctrlp
+" ------------------------------------------------------------------------------
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:20,results:20'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+nnoremap <c-b> :CtrlPBuffer<CR>
+
+" ------------------------------------------------------------------------------
+" Mark Down
 " ------------------------------------------------------------------------------
 let g:vim_markdown_folding_disabled=1
 
