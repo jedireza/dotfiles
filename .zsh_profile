@@ -9,6 +9,4 @@ unset file
 # Disable auto titles so `screen` names don't chnage
 DISABLE_AUTO_TITLE=true
 
-if [ "$COLORTERM" = "xfce4-terminal" ]; then
-  export TERM=xterm-256color
-fi
+export TERM=xterm-256color
