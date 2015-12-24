@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in $(xinput list | grep "Logitech G9x Laser Mouse" | sed -e 's/^.*id=\([0-9]*.\).*$/\1/')
+do
+	xinput set-prop $i 276 -1 -1 -1
+done
