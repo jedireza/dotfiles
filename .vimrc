@@ -60,6 +60,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Fix arrow keys and mouse scroll from inserting characters
+map <Esc>[B <Down>
+
 " Show vertical ruler at 100th column
 set colorcolumn=100
 
