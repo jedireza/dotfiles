@@ -129,6 +129,9 @@ autocmd BufNewFile,BufRead *.l20n set syntax=html
 " treat .webapp like .json
 autocmd BufNewFile,BufRead *.webapp set filetype=json
 
+" treat .jsm like .js
+autocmd BufNewFile,BufRead *.jsm set filetype=javascript
+
 " Turn off line wrapping
 " set nowrap
 
