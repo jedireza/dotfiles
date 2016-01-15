@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/windowswap"]
 	path = .vim/bundle/windowswap
 	url = git@github.com:wesQ3/vim-windowswap.git
+[submodule ".gimp-2.8/themes/gimp-hidpi"]
+	path = .gimp-2.8/themes/gimp-hidpi
+	url = git@github.com:jedireza/gimp-hidpi.git
