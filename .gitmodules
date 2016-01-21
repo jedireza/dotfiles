@@ -49,9 +49,6 @@
 [submodule ".vim/bundle/neomru"]
 	path = .vim/bundle/neomru
 	url = git@github.com:Shougo/neomru.vim.git
-[submodule ".vim/bundle/ctrlp"]
-	path = .vim/bundle/ctrlp
-	url = git@github.com:kien/ctrlp.vim.git
 [submodule ".vim/bundle/windowswap"]
 	path = .vim/bundle/windowswap
 	url = git@github.com:wesQ3/vim-windowswap.git
