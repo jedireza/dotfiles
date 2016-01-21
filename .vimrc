@@ -171,7 +171,13 @@ let NERDTreeShowHidden=1
 " ctrlp
 " ------------------------------------------------------------------------------
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:20,results:20'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_user_command = {
+  \ 'types': {
+    \ 1: ['.git', 'git --git-dir=%s/.git ls-files -oc --exclude-standard'],
+    \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+    \ },
+  \ 'fallback': 'find %s -type f'
+  \ }
 nnoremap <c-b> :CtrlPBuffer<CR>
 
 " ------------------------------------------------------------------------------
