@@ -178,6 +178,8 @@ let g:ctrlp_user_command = {
     \ },
   \ 'fallback': 'find %s -type f'
   \ }
+" use the cmatcher plugin
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 nnoremap <c-b> :CtrlPBuffer<CR>
 
 " ------------------------------------------------------------------------------
