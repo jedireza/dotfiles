@@ -61,3 +61,6 @@
 [submodule ".vim/bundle/ctrlp-cmatcher"]
 	path = .vim/bundle/ctrlp-cmatcher
 	url = git@github.com:JazzCore/ctrlp-cmatcher.git
+[submodule ".vim/bundle/vim-toml"]
+	path = .vim/bundle/vim-toml
+	url = git@github.com:cespare/vim-toml.git
