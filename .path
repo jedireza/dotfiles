@@ -5,3 +5,7 @@ export PATH="$HOME/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 source ~/.nvm/nvm.sh
+
+#rust
+export PATH="/home/jedireza/.multirust/toolchains/stable/cargo/bin:$PATH"
+export RUST_SRC_PATH="/home/jedireza/.rustsrc/src"
