@@ -117,7 +117,7 @@ syntax on
 filetype on
 
 " Color Scheme
-colorscheme my-distinguished
+colorscheme rizzle
 
 " Syntastic options
 let g:syntastic_javascript_checkers = ['jsxhint']
