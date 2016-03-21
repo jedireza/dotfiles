@@ -40,7 +40,7 @@ set backspace=indent,eol,start
 set autoindent
 
 " Add the g flag to search/replace by default
-set gdefault
+" set gdefault
 
 " Always show status line
 set laststatus=2
@@ -100,7 +100,7 @@ nnoremap Q @q
 set hlsearch
 
 " Ignore case of searches
-set ignorecase
+" set ignorecase
 
 " Highlight dynamically as pattern is typed
 set incsearch
