@@ -1,7 +1,0 @@
-#!/bin/bash
-
-for id in $(xinput list | grep "Logitech G9x Laser Mouse" | sed -e 's/^.*id=\([0-9]*.\).*$/\1/')
-do
-  prop=$(xinput list-props $id | grep "Scrolling Distance" | sed -e 's/^.*(\([0-9]*.\)).*/\1/')
-	xinput set-prop $id $prop -1 -1 -1
-done

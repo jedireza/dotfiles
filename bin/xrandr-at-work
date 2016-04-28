@@ -1,1 +1,0 @@
-xrandr --output eDP1 --auto --output DP1 --auto --panning 4096x2304+2560+0 --scale 1.6x1.6 --right-of eDP1
