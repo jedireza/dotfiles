@@ -100,7 +100,8 @@ nnoremap Q @q
 set hlsearch
 
 " Ignore case of searches
-" set ignorecase
+set ignorecase
+set smartcase
 
 " Highlight dynamically as pattern is typed
 set incsearch
