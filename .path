@@ -7,5 +7,7 @@ export NVM_DIR="$HOME/.nvm"
 source ~/.nvm/nvm.sh
 
 #rust
-export PATH="/home/jedireza/.multirust/toolchains/stable/cargo/bin:$PATH"
-export RUST_SRC_PATH="/home/jedireza/.rustsrc/src"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+#ruby/gems
+export PATH="$HOME/.gem/ruby/2.3.0/bin:$PATH"
