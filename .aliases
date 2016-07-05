@@ -43,6 +43,9 @@ alias dockerme-postgres-client="docker run -it --link pg:postgres --rm postgres 
 #docker alias: myos
 alias dockerme-myos-xhost='xhost + && docker run -it --rm -v ~/projects/myos/os/:/os/ -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY jedireza/myos'
 
+#arch updates
+alias sysupdate='sudo pacman -Syu'
+alias aurupdate='yaourt -Sbu --aur'
 
 #new tmux session named as the current directory
 alias tmuxme='tmux new -s $(echo ${PWD##*/} | sed "s/[_\.]/-/g")'
