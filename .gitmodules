@@ -73,3 +73,6 @@
 [submodule ".vim/bundle/vim-rizzle"]
 	path = .vim/bundle/vim-rizzle
 	url = git@github.com:jedireza/vim-rizzle.git
+[submodule ".vim/bundle/editorconfig-vim"]
+	path = .vim/bundle/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git
