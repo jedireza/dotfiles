@@ -49,3 +49,6 @@ alias aurupdate='yaourt -Sbu --aur'
 
 #new tmux session named as the current directory
 alias tmuxme='tmux new -s $(echo ${PWD##*/} | sed "s/[_\.]/-/g")'
+
+#xdg-open => open
+alias open='xdg-open'
