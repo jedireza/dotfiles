@@ -8,6 +8,13 @@ let mapleader=","
 " Make Vim more useful
 set nocompatible
 
+" set vim to chdir for each file
+if exists('+autochdir')
+  set autochdir
+else
+  autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
+endif
+
 " Enable pathogen
 set nocp
 execute pathogen#infect()
