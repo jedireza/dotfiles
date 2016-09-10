@@ -129,7 +129,7 @@ colorscheme rizzle
 
 " Syntastic options
 let g:syntastic_javascript_checkers = ['jsxhint']
-let g:syntastic_html_tidy_ignore_errors = ['trimming empty <span>', 'trimming empty <i>', ' is not recognized!', 'discarding unexpected ']
+let g:syntastic_html_tidy_ignore_errors = ['trimming empty <span>', 'trimming empty <i>', ' is not recognized!', 'discarding unexpected ', 'proprietary attribute']
 
 " l20n file syntax hack
 autocmd BufNewFile,BufRead *.l20n set syntax=html
