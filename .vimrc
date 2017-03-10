@@ -151,6 +151,20 @@ autocmd BufNewFile,BufRead *.jsm set filetype=javascript
 " set list
 
 " ------------------------------------------------------------------------------
+" PHP
+" ------------------------------------------------------------------------------
+
+function! PhpSyntaxOverride()
+  hi! def link phpDocTags  phpDefine
+  hi! def link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END
+
+" ------------------------------------------------------------------------------
 " Tabs vs. Spaces
 " ------------------------------------------------------------------------------
 
