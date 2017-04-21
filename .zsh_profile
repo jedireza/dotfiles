@@ -8,3 +8,8 @@ unset file
 
 # Disable auto titles so `screen` names don't chnage
 DISABLE_AUTO_TITLE=true
+
+# Before each command
+function preexec {
+  tmux_ssh_refresh # defined in .functions
+}
