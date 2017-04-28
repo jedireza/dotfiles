@@ -79,3 +79,6 @@
 [submodule ".vim/bundle/vim-php"]
 	path = .vim/bundle/vim-php
 	url = git@github.com:StanAngeloff/php.vim.git
+[submodule ".vim/bundle/vdebug"]
+	path = .vim/bundle/vdebug
+	url = git@github.com:joonty/vdebug.git
