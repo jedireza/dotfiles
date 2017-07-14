@@ -18,20 +18,6 @@ alias .....='cd ../../../..'
 #local npm bin
 alias npm-bin='PATH=$(npm bin):$PATH'
 
-#docker alias: fxos
-fxos="docker run -it --rm"
-fxos="$fxos -v ~/projects/B2G:/B2G"
-fxos="$fxos -v ~/projects/gaia:/gaia"
-fxos="$fxos -v ~/projects/mozilla-central:/mozilla-central"
-fxos="$fxos -v /dev/bus/usb:/dev/bus/usb"
-fxos="$fxos -v ~/.ssh:/home/root/.ssh"
-fxos="$fxos -v /tmp/.X11-unix:/tmp/.X11-unix"
-fxos="$fxos -e DISPLAY=$DISPLAY -e UID=$UID -e GID=$GID"
-fxos="$fxos --net=host"
-fxos="$fxos jedireza/fxos"
-alias dockerme-fxos="$fxos"
-alias dockerme-fxos-xhost="xhost + && $fxos && xhost -"
-
 #docker alias: mongodb
 alias dockerme-mongo-server='docker run --name mongodb -it --rm -v ~/data/mongodb:/data/db -p 27017:27017 mongo'
 alias dockerme-mongo-client="docker run -it --link mongodb:mongo -v ~/projects:/projects --rm mongo sh -c 'exec mongo \"\$MONGO_PORT_27017_TCP_ADDR:\$MONGO_PORT_27017_TCP_PORT\"'"
@@ -40,15 +26,5 @@ alias dockerme-mongo-client="docker run -it --link mongodb:mongo -v ~/projects:/
 alias dockerme-postgres-server='docker run --name pg -it --rm -v ~/data/postgres:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword postgres'
 alias dockerme-postgres-client="docker run -it --link pg:postgres --rm postgres sh -c 'exec psql -h \"\$POSTGRES_PORT_5432_TCP_ADDR\" -p \"\$POSTGRES_PORT_5432_TCP_PORT\" -U postgres'"
 
-#docker alias: myos
-alias dockerme-myos-xhost='xhost + && docker run -it --rm -v ~/projects/myos/os/:/os/ -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY jedireza/myos'
-
-#arch updates
-alias sysupdate='sudo pacman -Syu'
-alias aurupdate='yaourt -Sbu --aur'
-
 #new tmux session named as the current directory
 alias tmuxme='tmux new -s $(echo ${PWD##*/} | sed "s/[_\.]/-/g")'
-
-#xdg-open => open
-alias open='xdg-open'
