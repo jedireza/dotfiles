@@ -218,3 +218,10 @@ let g:gist_post_private = 1
 " Vdebug
 " ------------------------------------------------------------------------------
 let g:vdebug_options = {'break_on_open': 0}
+
+" ------------------------------------------------------------------------------
+" Move swp files out of the working directories
+" ------------------------------------------------------------------------------
+set backupdir=~/.vim/backup_files/
+set directory=~/.vim/swap_files/
+set undodir=~/.vim/undo_files/
