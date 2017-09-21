@@ -1,9 +1,6 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = git@github.com:robbyrussell/oh-my-zsh.git
-[submodule ".vim/bundle/jade"]
-	path = .vim/bundle/jade
-	url = git://github.com/digitaltoad/vim-jade.git
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
@@ -43,9 +40,6 @@
 [submodule ".vim/bundle/rust"]
 	path = .vim/bundle/rust
 	url = git@github.com:rust-lang/rust.vim.git
-[submodule ".vim/bundle/neomru"]
-	path = .vim/bundle/neomru
-	url = git@github.com:Shougo/neomru.vim.git
 [submodule ".vim/bundle/windowswap"]
 	path = .vim/bundle/windowswap
 	url = git@github.com:wesQ3/vim-windowswap.git

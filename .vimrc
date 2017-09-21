@@ -2,18 +2,8 @@
 " General
 " ------------------------------------------------------------------------------
 
-" map a leader key
-let mapleader=","
-
 " Make Vim more useful
 set nocompatible
-
-" set vim to chdir for each file
-if exists('+autochdir')
-  set autochdir
-else
-  autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
-endif
 
 " Enable pathogen
 set nocp
@@ -34,9 +24,6 @@ set encoding=utf-8 nobomb
 set binary
 set noeol
 
-" Use the OS clipboard by default (on versions compiled with `+clipboard`)
-" set clipboard=unnamed
-
 " Enhance command-line completion
 set wildmenu
 
@@ -45,9 +32,6 @@ set backspace=indent,eol,start
 
 " Indention
 set autoindent
-
-" Add the g flag to search/replace by default
-" set gdefault
 
 " Always show status line
 set laststatus=2
@@ -76,28 +60,6 @@ set colorcolumn=100
 " Easier navigation between tabs
 nmap <C-]> gt
 nmap <C-[> gT
-" nmap t gt
-" nmap T gT
-
-" Easier way to move lines
-if has('mac')
-  nnoremap ∆ :m+<CR>==
-  nnoremap ˚ :m-2<CR>==
-  inoremap ∆ <Esc>:m+<CR>==gi
-  inoremap ˚ <Esc>:m-2<CR>==gi
-  vnoremap ∆ :m'>+<CR>gv=gv
-  vnoremap ˚ :m-2<CR>gv=gv
-else
-  nnoremap <A-j> :m .+1<CR>==
-  nnoremap <A-k> :m .-2<CR>==
-  inoremap <A-j> <Esc>:m .+1<CR>==gi
-  inoremap <A-k> <Esc>:m .-2<CR>==gi
-  vnoremap <A-j> :m '>+1<CR>gv=gv
-  vnoremap <A-k> :m '<-2<CR>gv=gv
-endif
-
-" reply macro
-nnoremap Q @q
 
 " ------------------------------------------------------------------------------
 " Searching
@@ -131,25 +93,6 @@ colorscheme rizzle
 let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_html_tidy_ignore_errors = ['trimming empty <span>', 'trimming empty <i>', ' is not recognized!', 'discarding unexpected ', 'proprietary attribute']
 
-" l20n file syntax hack
-autocmd BufNewFile,BufRead *.l20n set syntax=html
-
-" treat .webapp like .json
-autocmd BufNewFile,BufRead *.webapp set filetype=json
-
-" treat .jsm like .js
-autocmd BufNewFile,BufRead *.jsm set filetype=javascript
-
-" Turn off line wrapping
-" set nowrap
-
-" Highlight current line
-" set cursorline
-
-" Show “invisible” characters
-" set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-" set list
-
 " ------------------------------------------------------------------------------
 " PHP
 " ------------------------------------------------------------------------------
@@ -172,16 +115,15 @@ augroup END
 set expandtab
 
 " X spaces for each tab
-set tabstop=2
+set tabstop=4
 
 " X spaces for indention
-set shiftwidth=2
+set shiftwidth=4
 
 " ------------------------------------------------------------------------------
 " airline
 " ------------------------------------------------------------------------------
 let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#enabled = 1
 
 " ------------------------------------------------------------------------------
 " NERDTree
@@ -210,18 +152,6 @@ nnoremap <c-b> :CtrlPBuffer<CR>
 let g:vim_markdown_folding_disabled=1
 
 " ------------------------------------------------------------------------------
-" Gist
-" ------------------------------------------------------------------------------
-let g:gist_post_private = 1
-
-" ------------------------------------------------------------------------------
 " Vdebug
 " ------------------------------------------------------------------------------
 let g:vdebug_options = {'break_on_open': 0}
-
-" ------------------------------------------------------------------------------
-" Move swp files out of the working directories
-" ------------------------------------------------------------------------------
-set backupdir=~/.vim/backup_files/
-set directory=~/.vim/swap_files/
-set undodir=~/.vim/undo_files/
