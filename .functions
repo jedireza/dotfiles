@@ -3,6 +3,21 @@ _has() {
   return $( whence $1 >/dev/null )
 }
 
+# functions which modify the path
+_prepend_to_path() {
+  if [ -d $1 -a -z ${path[(r)$1]} ]; then
+    path=($1 $path);
+  fi
+}
+_append_to_path() {
+  if [ -d $1 -a -z ${path[(r)$1]} ]; then
+    path=($path $1);
+  fi
+}
+_force_prepend_to_path() {
+  path=($1 ${(@)path:#$1})
+}
+
 # helper to refresh tmux env
 if [ -n "$TMUX" ]; then
   function tmux_ssh_refresh {
