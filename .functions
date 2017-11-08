@@ -1,4 +1,9 @@
-# Helper to refresh tmux env
+# returns whether the given command is executable or aliased
+_has() {
+  return $( whence $1 >/dev/null )
+}
+
+# helper to refresh tmux env
 if [ -n "$TMUX" ]; then
   function tmux_ssh_refresh {
     export $(tmux show-environment | grep "^SSH_AUTH_SOCK") &> /dev/null

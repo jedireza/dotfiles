@@ -76,3 +76,6 @@
 [submodule ".vim/bundle/vdebug"]
 	path = .vim/bundle/vdebug
 	url = git@github.com:joonty/vdebug.git
+[submodule ".vim/bundle/fzf"]
+	path = .vim/bundle/fzf
+	url = git@github.com:junegunn/fzf.vim.git
