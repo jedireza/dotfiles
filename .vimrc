@@ -67,7 +67,11 @@ nmap <C-[> gT
 " ------------------------------------------------------------------------------
 let g:fzf_layout = { 'up': '30%' }
 
-set rtp+=/usr/local/opt/fzf
+if isdirectory("~/.fzf")
+    set rtp+=~/.fzf
+else
+    set rtp+=/usr/local/opt/fzf
+endif
 
 nmap ; :Buffers<CR>
 nmap <Leader>t :Files<CR>
