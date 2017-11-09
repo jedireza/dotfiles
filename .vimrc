@@ -67,7 +67,7 @@ nmap <C-[> gT
 " ------------------------------------------------------------------------------
 let g:fzf_layout = { 'up': '30%' }
 
-if isdirectory("~/.fzf")
+if isdirectory($HOME . "/.fzf")
     set rtp+=~/.fzf
 else
     set rtp+=/usr/local/opt/fzf
