@@ -4,9 +4,6 @@
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
-[submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
-	url = git@github.com:bling/vim-airline.git
 [submodule ".vim/bundle/vim-multiple-cursors"]
 	path = .vim/bundle/vim-multiple-cursors
 	url = git@github.com:terryma/vim-multiple-cursors.git
@@ -49,3 +46,9 @@
 [submodule ".vim/bundle/ale"]
 	path = .vim/bundle/ale
 	url = git@github.com:w0rp/ale.git
+[submodule ".vim/bundle/lightline"]
+	path = .vim/bundle/lightline
+	url = git@github.com:itchyny/lightline.vim.git
+[submodule ".vim/bundle/polyglot"]
+	path = .vim/bundle/polyglot
+	url = git@github.com:sheerun/vim-polyglot.git

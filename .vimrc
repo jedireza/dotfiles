@@ -61,10 +61,10 @@ set colorcolumn=100
 nmap <C-]> gt
 nmap <C-[> gT
 
-
 " ------------------------------------------------------------------------------
 " fzf
 " ------------------------------------------------------------------------------
+
 let g:fzf_layout = { 'up': '30%' }
 
 if isdirectory($HOME . "/.fzf")
@@ -109,10 +109,6 @@ filetype on
 " Color Scheme
 colorscheme rizzle
 
-" Syntastic options
-let g:syntastic_javascript_checkers = ['jsxhint']
-let g:syntastic_html_tidy_ignore_errors = ['trimming empty <span>', 'trimming empty <i>', ' is not recognized!', 'discarding unexpected ', 'proprietary attribute']
-
 " ------------------------------------------------------------------------------
 " PHP
 " ------------------------------------------------------------------------------
@@ -141,35 +137,71 @@ set tabstop=4
 set shiftwidth=4
 
 " ------------------------------------------------------------------------------
-" airline
+" ale
 " ------------------------------------------------------------------------------
-let g:airline_powerline_fonts = 1
+
+let g:ale_sign_warning = '▲'
+let g:ale_sign_error = '✗'
+highlight link ALEWarningSign String
+highlight link ALEErrorSign Title
+
+" ------------------------------------------------------------------------------
+" lightine
+" ------------------------------------------------------------------------------
+
+let g:lightline = {
+\ 'colorscheme': 'wombat',
+\ 'active': {
+\   'left': [['mode', 'paste'], ['filename', 'modified']],
+\   'right': [['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
+\ },
+\ 'component_expand': {
+\   'linter_warnings': 'LightlineLinterWarnings',
+\   'linter_errors': 'LightlineLinterErrors',
+\   'linter_ok': 'LightlineLinterOK'
+\ },
+\ 'component_type': {
+\   'readonly': 'error',
+\   'linter_warnings': 'warning',
+\   'linter_errors': 'error'
+\ },
+\ }
+
+function! LightlineLinterWarnings() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '' : printf('%d ◆', all_non_errors)
+endfunction
+
+function! LightlineLinterErrors() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '' : printf('%d ✗', all_errors)
+endfunction
+
+function! LightlineLinterOK() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '✓ ' : ''
+endfunction
+
+autocmd User ALELint call s:MaybeUpdateLightline()
+
+" Update and show lightline but only if it's visible (e.g., not in Goyo)
+function! s:MaybeUpdateLightline()
+  if exists('#lightline')
+    call lightline#update()
+  end
+endfunction
 
 " ------------------------------------------------------------------------------
 " NERDTree
 " ------------------------------------------------------------------------------
 silent! nmap <c-t> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
-
-" ------------------------------------------------------------------------------
-" ctrlp
-" ------------------------------------------------------------------------------
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:20,results:20'
-let g:ctrlp_user_command = {
-  \ 'types': {
-    \ 1: ['.git', 'git --git-dir=%s/.git ls-files -oc --exclude-standard | grep -v node_modules'],
-    \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-    \ },
-  \ 'fallback': 'find %s -type f'
-  \ }
-" use the cmatcher plugin
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
-nnoremap <c-b> :CtrlPBuffer<CR>
-
-" ------------------------------------------------------------------------------
-" Mark Down
-" ------------------------------------------------------------------------------
-let g:vim_markdown_folding_disabled=1
 
 " ------------------------------------------------------------------------------
 " Vdebug
