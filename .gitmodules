@@ -10,12 +10,6 @@
 [submodule ".vim/bundle/vim-multiple-cursors"]
 	path = .vim/bundle/vim-multiple-cursors
 	url = git@github.com:terryma/vim-multiple-cursors.git
-[submodule ".vim/bundle/vim-distinguished"]
-	path = .vim/bundle/vim-distinguished
-	url = git@github.com:Lokaltog/vim-distinguished.git
-[submodule ".vim/bundle/vim-less"]
-	path = .vim/bundle/vim-less
-	url = git@github.com:groenewege/vim-less.git
 [submodule ".vim/bundle/emmet-vim"]
 	path = .vim/bundle/emmet-vim
 	url = git@github.com:mattn/emmet-vim.git
@@ -25,39 +19,15 @@
 [submodule ".vim/bundle/tcomment"]
 	path = .vim/bundle/tcomment
 	url = git@github.com:tomtom/tcomment_vim.git
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = git@github.com:scrooloose/syntastic.git
 [submodule ".vim/bundle/vim-sensible"]
 	path = .vim/bundle/vim-sensible
 	url = git@github.com:tpope/vim-sensible.git
-[submodule ".vim/bundle/vim-json"]
-	path = .vim/bundle/vim-json
-	url = git@github.com:elzr/vim-json.git
-[submodule ".vim/bundle/vim-jsx"]
-	path = .vim/bundle/vim-jsx
-	url = git@github.com:mxw/vim-jsx.git
-[submodule ".vim/bundle/rust"]
-	path = .vim/bundle/rust
-	url = git@github.com:rust-lang/rust.vim.git
 [submodule ".vim/bundle/windowswap"]
 	path = .vim/bundle/windowswap
 	url = git@github.com:wesQ3/vim-windowswap.git
 [submodule ".gimp-2.8/themes/gimp-hidpi"]
 	path = .gimp-2.8/themes/gimp-hidpi
 	url = git@github.com:jedireza/gimp-hidpi.git
-[submodule ".vim/bundle/ctrlp"]
-	path = .vim/bundle/ctrlp
-	url = git@github.com:ctrlpvim/ctrlp.vim.git
-[submodule ".vim/bundle/ctrlp-cmatcher"]
-	path = .vim/bundle/ctrlp-cmatcher
-	url = git@github.com:JazzCore/ctrlp-cmatcher.git
-[submodule ".vim/bundle/vim-toml"]
-	path = .vim/bundle/vim-toml
-	url = git@github.com:cespare/vim-toml.git
-[submodule ".vim/bundle/vim-racer"]
-	path = .vim/bundle/vim-racer
-	url = git@github.com:racer-rust/vim-racer.git
 [submodule ".vim/bundle/vim-hilinktrace"]
 	path = .vim/bundle/vim-hilinktrace
 	url = git@github.com:gerw/vim-HiLinkTrace.git
@@ -67,12 +37,6 @@
 [submodule ".vim/bundle/editorconfig-vim"]
 	path = .vim/bundle/editorconfig-vim
 	url = git@github.com:editorconfig/editorconfig-vim.git
-[submodule ".vim/bundle/vim-javascript"]
-	path = .vim/bundle/vim-javascript
-	url = git@github.com:pangloss/vim-javascript.git
-[submodule ".vim/bundle/vim-php"]
-	path = .vim/bundle/vim-php
-	url = git@github.com:StanAngeloff/php.vim.git
 [submodule ".vim/bundle/vdebug"]
 	path = .vim/bundle/vdebug
 	url = git@github.com:joonty/vdebug.git
