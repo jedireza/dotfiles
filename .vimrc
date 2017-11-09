@@ -77,6 +77,10 @@ nmap ; :Buffers<CR>
 nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
 
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 " ------------------------------------------------------------------------------
 " Searching
 " ------------------------------------------------------------------------------

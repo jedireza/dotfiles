@@ -79,3 +79,6 @@
 [submodule ".vim/bundle/fzf"]
 	path = .vim/bundle/fzf
 	url = git@github.com:junegunn/fzf.vim.git
+[submodule ".vim/bundle/ack"]
+	path = .vim/bundle/ack
+	url = git@github.com:mileszs/ack.vim.git
