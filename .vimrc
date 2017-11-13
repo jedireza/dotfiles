@@ -140,6 +140,7 @@ set shiftwidth=4
 " ale
 " ------------------------------------------------------------------------------
 
+let g:ale_lint_on_text_changed = 'never'
 let g:ale_sign_warning = '▲'
 let g:ale_sign_error = '✗'
 highlight link ALEWarningSign String
@@ -152,7 +153,7 @@ highlight link ALEErrorSign Title
 let g:lightline = {
 \ 'colorscheme': 'wombat',
 \ 'active': {
-\   'left': [['mode', 'paste'], ['filename', 'modified']],
+\   'left': [['mode', 'paste'], ['relativepath', 'modified']],
 \   'right': [['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
 \ },
 \ 'component_expand': {
