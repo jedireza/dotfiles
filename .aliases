@@ -22,9 +22,20 @@ alias npm-bin='PATH=$(npm bin):$PATH'
 alias dockerme-mongo-server='docker run --name mongodb -it --rm -v ~/data/mongodb:/data/db -p 27017:27017 mongo'
 alias dockerme-mongo-client="docker run -it --link mongodb:mongo -v ~/projects:/projects --rm mongo sh -c 'exec mongo \"\$MONGO_PORT_27017_TCP_ADDR:\$MONGO_PORT_27017_TCP_PORT\"'"
 
+#docker alias: mysql
+alias dockerme-mysql-server='docker run --name mysqldb -it --rm -v ~/data/mysql:/var/lib/mysql -p 3306:3306 -e MYSQL_ENV_MYSQL_ROOT_PASSWORD=password mysql'
+alias dockerme-mysql-client="docker run -it --link mysqldb:mysql --rm mysql sh -c 'exec mysql -hmysql -P3306 -uroot -ppassword'"
+
 #docker alias: postgres
-alias dockerme-postgres-server='docker run --name pg -it --rm -v ~/data/postgres:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword postgres'
-alias dockerme-postgres-client="docker run -it --link pg:postgres --rm postgres sh -c 'exec psql -h \"\$POSTGRES_PORT_5432_TCP_ADDR\" -p \"\$POSTGRES_PORT_5432_TCP_PORT\" -U postgres'"
+alias dockerme-postgres-server='docker run --name postgresdb -it --rm -v ~/data/postgres:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword postgres'
+alias dockerme-postgres-client="docker run -it --rm --link postgresdb:postgres --rm -e PGPASSWORD=mysecretpassword postgres psql -h postgres -U postgres"
+
+#docker alias: redis
+alias dockerme-redis-server='docker run --name redisdb -it --rm -v ~/data/redis:/data -p 6379:6379 redis'
+alias dockerme-redis-client="docker run -it --link redisdb:redis --rm redis sh -c 'exec redis-cli -h redis'"
+
+#docker alias: hbase
+# alias dockerme-hbase-server='docker run --name hbasedb -it --rm -v ~/data/hbase:/data -p 16010:16010 -p 2181:2181 dajobe/hbase'
 
 #new tmux session named as the current directory
 alias tmuxme='tmux new -s $(echo ${PWD##*/} | sed "s/[_\.]/-/g")'
