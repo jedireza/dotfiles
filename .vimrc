@@ -1,4 +1,35 @@
 " ------------------------------------------------------------------------------
+" Plug
+" ------------------------------------------------------------------------------
+call plug#begin('~/.vim/plugged')
+
+Plug 'scrooloose/nerdtree'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-surround'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-sensible'
+Plug 'wesQ3/vim-windowswap'
+Plug 'jedireza/gimp-hidpi'
+Plug 'gerw/vim-HiLinkTrace'
+Plug 'jedireza/vim-rizzle'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'joonty/vdebug'
+Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
+Plug 'w0rp/ale'
+Plug 'itchyny/lightline.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'rust-lang/rust.vim'
+
+" Unmanaged plugin (manually installed and updated)
+Plug '~/my-prototype-plugin'
+
+" Initialize plugin system
+call plug#end()
+
+
+" ------------------------------------------------------------------------------
 " General
 " ------------------------------------------------------------------------------
 

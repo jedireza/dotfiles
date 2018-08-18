@@ -1,3 +1,6 @@
 [submodule ".gimp-2.8/themes/gimp-hidpi"]
 	path = .gimp-2.8/themes/gimp-hidpi
 	url = git@github.com:jedireza/gimp-hidpi.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = git@github.com:robbyrussell/oh-my-zsh.git
