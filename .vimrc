@@ -5,11 +5,6 @@
 " Make Vim more useful
 set nocompatible
 
-" Enable pathogen
-set nocp
-execute pathogen#infect()
-call pathogen#helptags()
-
 " Do not create swap files, we're using git after all
 set nobackup
 set nowritebackup
