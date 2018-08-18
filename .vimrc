@@ -3,27 +3,29 @@
 " ------------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-surround'
-Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-sensible'
-Plug 'wesQ3/vim-windowswap'
-Plug 'jedireza/gimp-hidpi'
-Plug 'gerw/vim-HiLinkTrace'
-Plug 'jedireza/vim-rizzle'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'gerw/vim-HiLinkTrace'
+Plug 'itchyny/lightline.vim'
+Plug 'jedireza/gimp-hidpi'
+Plug 'jedireza/vim-rizzle'
 Plug 'joonty/vdebug'
 Plug 'junegunn/fzf.vim'
+Plug 'maralla/completor.vim'
+Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
-Plug 'w0rp/ale'
-Plug 'itchyny/lightline.vim'
-Plug 'sheerun/vim-polyglot'
+Plug 'pangloss/vim-javascript'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
 Plug 'rust-lang/rust.vim'
-
-" Unmanaged plugin (manually installed and updated)
-Plug '~/my-prototype-plugin'
+Plug 'scrooloose/nerdtree'
+Plug 'sheerun/vim-polyglot'
+Plug 'ternjs/tern_for_vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'w0rp/ale'
+Plug 'wesQ3/vim-windowswap'
 
 " Initialize plugin system
 call plug#end()
@@ -138,6 +140,25 @@ set background=dark
 colorscheme rizzle
 
 " ------------------------------------------------------------------------------
+" completor
+" ------------------------------------------------------------------------------
+
+let g:completor_racer_binary = '/Users/reza/.cargo/bin/racer'
+let g:completor_node_binary = '/Users/reza/.nvm/versions/node/v10.9.0/bin/node'
+
+" ------------------------------------------------------------------------------
+" LSP
+" ------------------------------------------------------------------------------
+
+if executable('rls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'rls',
+        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
+        \ 'whitelist': ['rust'],
+        \ })
+endif
+
+" ------------------------------------------------------------------------------
 " PHP
 " ------------------------------------------------------------------------------
 
@@ -168,6 +189,9 @@ set shiftwidth=4
 " ale
 " ------------------------------------------------------------------------------
 
+let g:ale_completion_enabled = 1
+let g:ale_rust_rls_executable = 'rls'
+let g:ale_rust_rls_toolchain = 'nightly'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_sign_warning = '▲'
 let g:ale_sign_error = '✗'
