@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/polyglot"]
 	path = .vim/bundle/polyglot
 	url = git@github.com:sheerun/vim-polyglot.git
+[submodule ".vim/bundle/rust.vim"]
+	path = .vim/bundle/rust.vim
+	url = git@github.com:rust-lang/rust.vim.git

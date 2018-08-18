@@ -108,6 +108,7 @@ syntax on
 filetype on
 
 " Color Scheme
+set background=dark
 colorscheme rizzle
 
 " ------------------------------------------------------------------------------
