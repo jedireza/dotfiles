@@ -6,11 +6,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'editorconfig/editorconfig-vim'
 Plug 'gerw/vim-HiLinkTrace'
 Plug 'itchyny/lightline.vim'
+Plug 'jdsimcoe/panic.vim'
 Plug 'jedireza/gimp-hidpi'
 Plug 'jedireza/vim-rizzle'
 Plug 'joonty/vdebug'
 Plug 'junegunn/fzf.vim'
 Plug 'maralla/completor.vim'
+Plug 'marciomazza/vim-brogrammer-theme'
 Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
 Plug 'pangloss/vim-javascript'
@@ -24,6 +26,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
+Plug 'trusktr/seti.vim'
 Plug 'w0rp/ale'
 Plug 'wesQ3/vim-windowswap'
 
@@ -135,9 +138,15 @@ set number
 syntax on
 filetype on
 
+" True colors
+set termguicolors
+if &term =~# '^screen'
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
 " Color Scheme
-set background=dark
-colorscheme rizzle
+colorscheme brogrammer
 
 " ------------------------------------------------------------------------------
 " completor
