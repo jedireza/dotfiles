@@ -88,7 +88,7 @@ nnoremap <C-H> <C-W><C-H>
 map <Esc>[B <Down>
 
 " Show vertical ruler at 100th column
-set colorcolumn=100
+set colorcolumn=0
 
 " Easier navigation between tabs
 nmap <C-]> gt
