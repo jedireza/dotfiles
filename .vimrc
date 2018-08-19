@@ -4,6 +4,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'editorconfig/editorconfig-vim'
+Plug 'felixhummel/setcolors.vim'
 Plug 'gerw/vim-HiLinkTrace'
 Plug 'itchyny/lightline.vim'
 Plug 'jdsimcoe/panic.vim'
@@ -146,7 +147,16 @@ if &term =~# '^screen'
 endif
 
 " Color Scheme
-colorscheme panic
+colorscheme rizzle
+
+" Find the highlight group
+nmap <leader>sp :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 
 " ------------------------------------------------------------------------------
 " completor
