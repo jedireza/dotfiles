@@ -146,7 +146,7 @@ if &term =~# '^screen'
 endif
 
 " Color Scheme
-colorscheme brogrammer
+colorscheme panic
 
 " ------------------------------------------------------------------------------
 " completor
