@@ -72,6 +72,9 @@ set laststatus=2
 " Don’t reset cursor to start of line when moving around.
 set nostartofline
 
+" Cursorline
+set cursorline
+
 " Show the filename in the window titlebar
 set title
 
