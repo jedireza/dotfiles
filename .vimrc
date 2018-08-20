@@ -1,19 +1,17 @@
 " ------------------------------------------------------------------------------
 " Plug
 " ------------------------------------------------------------------------------
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'editorconfig/editorconfig-vim'
 Plug 'felixhummel/setcolors.vim'
 Plug 'gerw/vim-HiLinkTrace'
 Plug 'itchyny/lightline.vim'
-Plug 'jdsimcoe/panic.vim'
-Plug 'jedireza/gimp-hidpi'
 Plug 'jedireza/vim-rizzle'
 Plug 'joonty/vdebug'
 Plug 'junegunn/fzf.vim'
 Plug 'maralla/completor.vim'
-Plug 'marciomazza/vim-brogrammer-theme'
 Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
 Plug 'pangloss/vim-javascript'
@@ -27,11 +25,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'trusktr/seti.vim'
 Plug 'w0rp/ale'
 Plug 'wesQ3/vim-windowswap'
 
-" Initialize plugin system
 call plug#end()
 
 
@@ -73,7 +69,7 @@ set laststatus=2
 set nostartofline
 
 " Cursorline
-set cursorline
+set nocursorline
 
 " Show the filename in the window titlebar
 set title
@@ -165,6 +161,13 @@ endfunc
 " completor
 " ------------------------------------------------------------------------------
 
+" disable auto trigger
+let g:completor_auto_trigger = 0
+
+" activate with tab
+inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
+
+" binaries
 let g:completor_racer_binary = '/Users/reza/.cargo/bin/racer'
 let g:completor_node_binary = '/Users/reza/.nvm/versions/node/v10.9.0/bin/node'
 
