@@ -5,6 +5,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go'
 Plug 'felixhummel/setcolors.vim'
 Plug 'gerw/vim-HiLinkTrace'
 Plug 'itchyny/lightline.vim'

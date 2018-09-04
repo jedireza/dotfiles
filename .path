@@ -12,6 +12,10 @@ export NVM_DIR="$HOME/.nvm"
 #rust
 export PATH="$PATH:$HOME/.cargo/bin"
 
+#go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:$(go env GOPATH)/bin
+
 #ruby/gems
 export PATH="$PATH:$HOME/.gem/ruby/2.3.0/bin"
 
