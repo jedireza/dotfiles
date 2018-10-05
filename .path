@@ -1,6 +1,9 @@
 #user bin
 export PATH="$PATH:$HOME/bin"
 
+#brew sbin
+export PATH="/usr/local/sbin:$PATH"
+
 #gvm
 export PATH="$PATH:$HOME/.gvm/bin"
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
