@@ -215,6 +215,7 @@ set shiftwidth=4
 " ale
 " ------------------------------------------------------------------------------
 
+let g:ale_set_highlights = 0
 let g:ale_completion_enabled = 1
 let g:ale_rust_rls_executable = 'rls'
 let g:ale_rust_rls_toolchain = 'nightly'
