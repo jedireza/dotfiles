@@ -222,9 +222,6 @@ let g:ale_rust_rls_toolchain = 'nightly'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_sign_warning = '▲'
 let g:ale_sign_error = '✗'
-let g:ale_linters = {
-\    'typescript': ['tslint'],
-\}
 highlight link ALEWarningSign String
 highlight link ALEErrorSign Title
 
