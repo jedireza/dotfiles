@@ -1,6 +1,9 @@
 #user bin
 export PATH="$PATH:$HOME/bin"
 
+#coreutils
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
 #brew sbin
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
