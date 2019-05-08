@@ -1,6 +1,5 @@
-[user]
-	name = jedireza
-	email = reza@akhavan.me
+[pager]
+	branch = false
 [mergetool]
 	keepBackup = true
 [color]
