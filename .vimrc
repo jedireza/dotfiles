@@ -20,6 +20,7 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
+Plug 'jparise/vim-graphql'
 Plug 'ternjs/tern_for_vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tcomment_vim'
@@ -223,6 +224,11 @@ let g:ale_rust_rls_toolchain = 'nightly'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_sign_warning = '▲'
 let g:ale_sign_error = '✗'
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\   'typescript': ['prettier'],
+\}
 highlight link ALEWarningSign String
 highlight link ALEErrorSign Title
 
