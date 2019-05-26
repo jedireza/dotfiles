@@ -1,3 +1,6 @@
+#lsa show all
+alias lsa='ls -A'
+
 #local npm bin
 alias npm-bin='PATH=$(npm bin):$PATH'
 
