@@ -6,7 +6,7 @@ cd "$(dirname "$BASH_SOURCE")"
 # git updated
 # git pull origin master
 git submodule init
-git submodule update
+git submodule update --rebase --remote
 
 # Sync files
 function syncUp() {
