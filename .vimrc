@@ -30,6 +30,7 @@ Plug 'vim-vdebug/vdebug'
 Plug 'w0rp/ale'
 Plug 'wesQ3/vim-windowswap'
 Plug 'prettier/vim-prettier'
+Plug 'Quramy/tsuquyomi'
 
 call plug#end()
 
