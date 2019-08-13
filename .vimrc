@@ -170,6 +170,9 @@ let g:completor_auto_trigger = 0
 " activate with tab
 inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
 
+" css
+let g:completor_css_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
+
 " binaries
 let g:completor_racer_binary = '/Users/reza/.cargo/bin/racer'
 let g:completor_node_binary = '/Users/reza/.nvm/versions/node/v10.9.0/bin/node'
