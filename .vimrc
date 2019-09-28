@@ -4,17 +4,15 @@
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'felixhummel/setcolors.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
-Plug 'felixhummel/setcolors.vim'
 Plug 'gerw/vim-HiLinkTrace'
 Plug 'itchyny/lightline.vim'
-Plug 'jedireza/vim-rizzle'
 Plug 'junegunn/fzf.vim'
 Plug 'maralla/completor.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
-Plug 'pangloss/vim-javascript'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'rust-lang/rust.vim'
@@ -22,6 +20,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'jparise/vim-graphql'
 Plug 'ternjs/tern_for_vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'jelera/vim-javascript-syntax'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-sensible'
@@ -30,6 +31,9 @@ Plug 'w0rp/ale'
 Plug 'wesQ3/vim-windowswap'
 Plug 'prettier/vim-prettier'
 Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'rakr/vim-one'
 
 call plug#end()
 
@@ -47,38 +51,38 @@ set nowritebackup
 set noswapfile
 
 " Disable folding
-set nofoldenable
+" set nofoldenable
 
 " Use UTF-8 without BOM
-set encoding=utf-8 nobomb
+" set encoding=utf-8 nobomb
 
 " Don’t add empty newlines at the end of files
-set binary
-set noeol
+" set binary
+" set noeol
 
 " Enhance command-line completion
-set wildmenu
+" set wildmenu
 
 " Allow backspace in insert mode
-set backspace=indent,eol,start
+" set backspace=indent,eol,start
 
 " Indention
 set autoindent
 
 " Always show status line
-set laststatus=2
+" set laststatus=2
 
 " Don’t reset cursor to start of line when moving around.
-set nostartofline
+" set nostartofline
 
 " Cursorline
-set nocursorline
+" set nocursorline
 
 " Show the filename in the window titlebar
-set title
+" set title
 
 " Start scrolling three lines before the horizontal window border
-set scrolloff=3
+" set scrolloff=3
 
 " Easier navigation between splits
 nnoremap <C-J> <C-W><C-J>
@@ -87,14 +91,10 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Fix arrow keys and mouse scroll from inserting characters
-map <Esc>[B <Down>
+" map <Esc>[B <Down>
 
 " Show vertical ruler at 100th column
 set colorcolumn=0
-
-" Easier navigation between tabs
-nmap <C-]> gt
-nmap <C-[> gT
 
 " ------------------------------------------------------------------------------
 " fzf
@@ -134,6 +134,13 @@ set incsearch
 " Styling
 " ------------------------------------------------------------------------------
 
+" Enable true color
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 " Enable line numbers
 set number
 
@@ -141,24 +148,8 @@ set number
 syntax on
 filetype on
 
-" True colors
-set termguicolors
-if &term =~# '^screen'
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-endif
-
 " Color Scheme
-colorscheme rizzle
-
-" Find the highlight group
-nmap <leader>sp :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
+colorscheme one
 
 " ------------------------------------------------------------------------------
 " completor
