@@ -150,6 +150,8 @@ filetype on
 
 " Color Scheme
 colorscheme one
+set background=dark
+call one#highlight('Normal', '', '151515', 'none')
 
 " ------------------------------------------------------------------------------
 " completor
