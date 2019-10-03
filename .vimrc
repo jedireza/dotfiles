@@ -226,6 +226,7 @@ let g:ale_fixers = {
 \   'scss': ['prettier'],
 \   'javascript': ['prettier'],
 \   'typescript': ['prettier'],
+\   'graphql': ['prettier'],
 \}
 highlight link ALEWarningSign String
 highlight link ALEErrorSign Title
