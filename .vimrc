@@ -34,6 +34,7 @@ Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'rakr/vim-one'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
@@ -51,7 +52,7 @@ set nowritebackup
 set noswapfile
 
 " Disable folding
-" set nofoldenable
+set nofoldenable
 
 " Use UTF-8 without BOM
 " set encoding=utf-8 nobomb
