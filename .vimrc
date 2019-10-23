@@ -223,11 +223,12 @@ let g:ale_sign_warning = '▲'
 let g:ale_sign_error = '✗'
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
+\   'graphql': ['prettier'],
+\   'javascript': ['eslint', 'prettier'],
+\   'json': ['prettier'],
 \   'less': ['prettier'],
 \   'scss': ['prettier'],
-\   'javascript': ['prettier'],
-\   'typescript': ['prettier'],
-\   'graphql': ['prettier'],
+\   'typescript': ['eslint', 'prettier'],
 \}
 highlight link ALEWarningSign String
 highlight link ALEErrorSign Title
