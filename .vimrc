@@ -29,7 +29,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 Plug 'wesQ3/vim-windowswap'
-Plug 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
@@ -224,6 +224,7 @@ let g:ale_sign_error = '✗'
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   'graphql': ['prettier'],
+\   'html': ['prettier'],
 \   'javascript': ['eslint', 'prettier'],
 \   'json': ['prettier'],
 \   'less': ['prettier'],
