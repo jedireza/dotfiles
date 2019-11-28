@@ -35,6 +35,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'rakr/vim-one'
 Plug 'plasticboy/vim-markdown'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
