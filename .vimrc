@@ -27,7 +27,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'wesQ3/vim-windowswap'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'Quramy/tsuquyomi'
