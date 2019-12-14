@@ -225,10 +225,12 @@ let g:ale_fixers = {
 \   'graphql': ['prettier'],
 \   'html': ['prettier'],
 \   'javascript': ['eslint', 'prettier'],
+\   'javascriptreact': ['eslint', 'prettier'],
 \   'json': ['prettier'],
 \   'less': ['prettier'],
 \   'scss': ['prettier'],
 \   'typescript': ['eslint', 'prettier'],
+\   'typescriptreact': ['eslint', 'prettier'],
 \}
 highlight link ALEWarningSign String
 highlight link ALEErrorSign Title
