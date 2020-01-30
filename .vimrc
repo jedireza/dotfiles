@@ -110,7 +110,7 @@ endif
 
 nmap ; :Buffers<CR>
 nmap <Leader>t :Files<CR>
-nmap <Leader>r :Tags<CR>
+nmap <Leader>r :Rg<CR>
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
