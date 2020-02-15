@@ -227,6 +227,7 @@ let g:ale_fixers = {
 \   'javascript': ['eslint', 'prettier'],
 \   'javascriptreact': ['eslint', 'prettier'],
 \   'json': ['prettier'],
+\   'css': ['prettier'],
 \   'less': ['prettier'],
 \   'scss': ['prettier'],
 \   'typescript': ['eslint', 'prettier'],
