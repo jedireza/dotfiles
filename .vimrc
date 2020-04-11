@@ -169,6 +169,8 @@ nnoremap <leader>jd :YcmCompleter GoTo<CR>
 " ale
 " ------------------------------------------------------------------------------
 
+nnoremap <leader>ad :ALEDetail<CR>
+
 let g:ale_set_highlights = 0
 let g:ale_completion_enabled = 0
 let g:ale_rust_rls_executable = 'rls'
