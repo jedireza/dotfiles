@@ -4,36 +4,30 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'felixhummel/setcolors.vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
 Plug 'gerw/vim-HiLinkTrace'
 Plug 'itchyny/lightline.vim'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf.vim'
-Plug 'maralla/completor.vim'
-Plug 'mattn/emmet-vim'
-Plug 'mileszs/ack.vim'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
+Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'rakr/vim-one'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
-Plug 'jparise/vim-graphql'
 Plug 'ternjs/tern_for_vim'
-Plug 'pangloss/vim-javascript'
-Plug 'jelera/vim-javascript-syntax'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'dense-analysis/ale'
 Plug 'wesQ3/vim-windowswap'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'Quramy/tsuquyomi'
-Plug 'leafgarland/typescript-vim'
-Plug 'rakr/vim-one'
-Plug 'plasticboy/vim-markdown'
-Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -154,49 +148,6 @@ set background=dark
 call one#highlight('Normal', '', '111111', 'none')
 
 " ------------------------------------------------------------------------------
-" completor
-" ------------------------------------------------------------------------------
-
-" disable auto trigger
-let g:completor_auto_trigger = 0
-
-" activate with tab
-inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
-
-" css
-let g:completor_css_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
-
-" binaries
-let g:completor_racer_binary = '/Users/reza/.cargo/bin/racer'
-let g:completor_node_binary = '/Users/reza/.nvm/versions/node/v10.9.0/bin/node'
-
-" ------------------------------------------------------------------------------
-" LSP
-" ------------------------------------------------------------------------------
-
-if executable('rls')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'rls',
-        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
-        \ 'whitelist': ['rust'],
-        \ })
-endif
-
-" ------------------------------------------------------------------------------
-" PHP
-" ------------------------------------------------------------------------------
-
-function! PhpSyntaxOverride()
-  hi! def link phpDocTags  phpDefine
-  hi! def link phpDocParam phpType
-endfunction
-
-augroup phpSyntaxOverride
-  autocmd!
-  autocmd FileType php call PhpSyntaxOverride()
-augroup END
-
-" ------------------------------------------------------------------------------
 " Tabs vs. Spaces
 " ------------------------------------------------------------------------------
 
@@ -235,6 +186,12 @@ let g:ale_fixers = {
 \}
 highlight link ALEWarningSign String
 highlight link ALEErrorSign Title
+
+" ------------------------------------------------------------------------------
+" rust.vim
+" ------------------------------------------------------------------------------
+
+let g:rustfmt_autosave = 1
 
 " ------------------------------------------------------------------------------
 " tsuquyomi
@@ -316,8 +273,3 @@ endfunction
 " ------------------------------------------------------------------------------
 silent! nmap <c-p> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
-
-" ------------------------------------------------------------------------------
-" Vdebug
-" ------------------------------------------------------------------------------
-let g:vdebug_options = {'break_on_open': 0}
