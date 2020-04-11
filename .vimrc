@@ -161,11 +161,16 @@ set tabstop=4
 set shiftwidth=4
 
 " ------------------------------------------------------------------------------
+" YouCompleteMe
+" ------------------------------------------------------------------------------
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
+" ------------------------------------------------------------------------------
 " ale
 " ------------------------------------------------------------------------------
 
 let g:ale_set_highlights = 0
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 let g:ale_rust_rls_executable = 'rls'
 let g:ale_rust_rls_toolchain = 'nightly'
 let g:ale_lint_on_text_changed = 'never'
