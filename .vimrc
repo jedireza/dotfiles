@@ -197,6 +197,7 @@ highlight link ALEErrorSign Title
 " ------------------------------------------------------------------------------
 
 let g:rustfmt_autosave = 1
+hi rustQuestionMark guifg=#ff9011 guibg=NONE
 
 " ------------------------------------------------------------------------------
 " vim-go
