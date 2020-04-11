@@ -4,7 +4,6 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'Quramy/tsuquyomi'
 Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
@@ -28,6 +27,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'wesQ3/vim-windowswap'
+Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 
