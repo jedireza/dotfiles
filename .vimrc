@@ -199,15 +199,6 @@ highlight link ALEErrorSign Title
 let g:rustfmt_autosave = 1
 
 " ------------------------------------------------------------------------------
-" tsuquyomi
-" ------------------------------------------------------------------------------
-
-let g:tsuquyomi_disable_quickfix = 1
-
-autocmd FileType typescript nmap <buffer> <Leader>s : <C-u>echo tsuquyomi#hint()<CR>
-autocmd FileType typescriptreact nmap <buffer> <Leader>s : <C-u>echo tsuquyomi#hint()<CR>
-
-" ------------------------------------------------------------------------------
 " vim-go
 " ------------------------------------------------------------------------------
 
