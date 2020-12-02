@@ -164,6 +164,7 @@ set shiftwidth=4
 " YouCompleteMe
 " ------------------------------------------------------------------------------
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " ------------------------------------------------------------------------------
 " ale
