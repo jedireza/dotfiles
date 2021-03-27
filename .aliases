@@ -1,9 +1,6 @@
 #lsa show all
 alias lsa='ls -A'
 
-#local npm bin
-alias npm-bin='PATH=$(npm bin):$PATH'
-
 #docker alias: mongodb
 alias dockerme-mongo-server='docker run --name mongodb -it --rm -v ~/data/mongodb:/data/db -p 27017:27017 mongo'
 alias dockerme-mongo-client="docker run -it --link mongodb:mongo -v ~/projects:/projects --rm mongo sh -c 'exec mongo \"\$MONGO_PORT_27017_TCP_ADDR:\$MONGO_PORT_27017_TCP_PORT\"'"

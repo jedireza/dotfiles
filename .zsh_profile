@@ -1,15 +1,10 @@
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{functions,path,aliases,extra,exports}; do
+for file in ~/.{path,aliases,extra,exports}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
 
 # Disable auto titles so `screen` names don't chnage
 DISABLE_AUTO_TITLE=true
-
-# Before each command
-function preexec {
-  tmux_ssh_refresh # defined in .functions
-}
