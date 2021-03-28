@@ -129,6 +129,10 @@ set incsearch
 " ------------------------------------------------------------------------------
 
 " Enable true color
+if exists('$TMUX')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
 set termguicolors
 
 " Enable line numbers
@@ -141,7 +145,7 @@ filetype on
 " Color Scheme
 colorscheme one
 set background=dark
-call one#highlight('Normal', '', '111111', 'none')
+call one#highlight('Normal', '', '111111', '')
 
 " ------------------------------------------------------------------------------
 " Tabs vs. Spaces
