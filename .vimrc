@@ -103,7 +103,7 @@ else
 endif
 
 nmap ; :Buffers<CR>
-nmap <Leader>t :Files<CR>
+nmap <Leader>t :GFiles<CR>
 nmap <Leader>r :Rg<CR>
 
 if executable('ag')
