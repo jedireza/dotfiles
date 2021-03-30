@@ -1,3 +1,6 @@
+#use gls with colors (coreutils)
+alias ls="gls --color=always"
+
 #lsa show all
 alias lsa='ls -A'
 
