@@ -95,6 +95,13 @@ set colorcolumn=0
 " ------------------------------------------------------------------------------
 
 let g:fzf_layout = { 'up': '30%' }
+
+if isdirectory($HOME . "/.fzf")
+    set rtp+=~/.fzf
+else
+    set rtp+=/usr/local/opt/fzf
+endif
+
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 nmap ; :Buffers<CR>
