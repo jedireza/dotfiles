@@ -9,6 +9,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
 Plug 'gerw/vim-HiLinkTrace'
 Plug 'itchyny/lightline.vim'
+Plug 'jbmorgado/vim-pine-script'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf.vim'
@@ -257,3 +258,9 @@ endfunction
 " ------------------------------------------------------------------------------
 silent! nmap <c-p> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+
+" ------------------------------------------------------------------------------
+" custom file extension <=> syntax mapping
+" ------------------------------------------------------------------------------
+au BufNewFile,BufRead *.pine set filetype=psl
+
