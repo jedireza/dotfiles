@@ -29,6 +29,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'wesQ3/vim-windowswap'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
