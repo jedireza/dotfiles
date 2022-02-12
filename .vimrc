@@ -101,7 +101,7 @@ let g:fzf_layout = { 'up': '30%' }
 if isdirectory($HOME . "/.fzf")
     set rtp+=~/.fzf
 else
-    set rtp+=/usr/local/opt/fzf
+    set rtp+=/opt/homebrew/opt/fzf
 endif
 
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
