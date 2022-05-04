@@ -145,7 +145,7 @@ filetype on
 " Color Scheme
 colorscheme one
 set background=dark
-call one#highlight('Normal', '', '111111', '')
+call one#highlight('Normal', '', '000000', '')
 
 " ------------------------------------------------------------------------------
 " Tabs vs. Spaces
