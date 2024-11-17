@@ -1,0 +1,29 @@
+[colors.bright]
+black = "#777C85"
+blue = "#6AB0F3"
+cyan = "#76D4D6"
+green = "#76D4D6"
+magenta = "#E1A6F2"
+red = "#F2777A"
+white = "#FFFFFF"
+yellow = "#FFEEA6"
+
+[colors.normal]
+black = "#2D2D2D"
+blue = "#6AB0F3"
+cyan = "#76D4D6"
+green = "#92D192"
+magenta = "#E1A6F2"
+red = "#F2777A"
+white = "#B3B9C5"
+yellow = "#FFD479"
+
+[colors.primary]
+background = "#000000"
+foreground = "#B3B9C5"
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "Source Code Pro"
