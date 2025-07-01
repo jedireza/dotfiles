@@ -13,8 +13,8 @@ alias dockerme-mysql-server='docker run --name mysqldb -it --rm -v mysqldata:/va
 alias dockerme-mysql-client="docker run -it --link mysqldb:mysql --rm mysql sh -c 'exec mysql -hmysql -P3306 -uroot -ppassword'"
 
 #docker alias: postgres (FYI: create the pgdata volume first)
-alias dockerme-postgres-server='docker run --name postgresdb -it --rm -v pgdata:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword postgres:12.4'
-alias dockerme-postgres-client="docker run -it --rm --link postgresdb:postgres --rm -e PGPASSWORD=mysecretpassword postgres:12.4 psql -h postgres -U postgres"
+alias dockerme-postgres-server='docker run --name postgresdb -it --rm -v pgdata:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword postgres:16.9'
+alias dockerme-postgres-client="docker run -it --rm --link postgresdb:postgres --rm -e PGPASSWORD=mysecretpassword postgres:16.9 psql -h postgres -U postgres"
 
 #docker alias: redis (FYI: create the redisdata volume first)
 alias dockerme-redis-server='docker run --name redisdb -it --rm -v redisdata:/data -p 6379:6379 redis'
