@@ -6,5 +6,8 @@ for file in ~/.{path,exports,aliases,func,extra}; do
 done
 unset file
 
-# Disable auto titles so `screen` names don't chnage
+# Disable auto titles so `screen` names don't change
 DISABLE_AUTO_TITLE=true
+
+# kubectl completion
+source <(kubectl completion zsh)
