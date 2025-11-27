@@ -6,7 +6,7 @@ alias lsa='ls -A'
 
 #docker alias: mongodb (FYI: create the mongodata volume first)
 alias dockerme-mongo-server='docker run --name mongodb -it --rm -v mongodata:/data/db -p 27017:27017 mongo'
-alias dockerme-mongo-client="docker run -it --link mongodb:mongo --rm mongo sh -c 'exec mongosh \"\$MONGO_PORT_27017_TCP_ADDR:\$MONGO_PORT_27017_TCP_PORT\"'"
+alias dockerme-mongo-client="docker run -it --link mongodb:mongo --rm mongo sh -c 'exec mongosh mongodb://mongo:27017'"
 
 #docker alias: mysql (FYI: create the mysqldata volume first)
 alias dockerme-mysql-server='docker run --name mysqldb -it --rm -v mysqldata:/var/lib/mysql -p 3306:3306 -e MYSQL_ENV_MYSQL_ROOT_PASSWORD=password mysql'
