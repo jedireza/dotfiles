@@ -3,6 +3,7 @@ alias ls="gls --color=always"
 
 #lsa show all
 alias lsa='ls -A'
+alias subl='"/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"'
 
 #docker alias: mongodb (FYI: create the mongodata volume first)
 alias dockerme-mongo-server='docker run --name mongodb -it --rm -v mongodata:/data/db -p 27017:27017 mongo'
