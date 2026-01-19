@@ -16,7 +16,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'rakr/vim-one'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
@@ -28,7 +27,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'wesQ3/vim-windowswap'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'easymotion/vim-easymotion'
 
 call plug#end()
