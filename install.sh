@@ -7,6 +7,7 @@ BACKUP_DIR="$HOME/.dotfiles_backup/$(date +%Y%m%d_%H%M%S)"
 # Flags
 DRY_RUN=false
 FORCE=false
+CLEANUP=false
 
 usage() {
     echo "Usage: $0 [OPTIONS]"
@@ -14,6 +15,7 @@ usage() {
     echo "Options:"
     echo "  --dry-run    Preview changes without making them"
     echo "  --force      Skip confirmation prompts"
+    echo "  --cleanup    Also remove deprecated files from home directory"
     echo "  -h, --help   Show this help message"
 }
 
@@ -26,6 +28,10 @@ while [[ $# -gt 0 ]]; do
             ;;
         --force)
             FORCE=true
+            shift
+            ;;
+        --cleanup)
+            CLEANUP=true
             shift
             ;;
         -h|--help)
@@ -102,6 +108,20 @@ else
     cd "$DOTFILES_DIR"
     git submodule init
     git submodule update
+fi
+
+# Run cleanup if requested
+if $CLEANUP; then
+    echo ""
+    echo "Running cleanup..."
+    cleanup_flags=""
+    if $DRY_RUN; then
+        cleanup_flags="$cleanup_flags --dry-run"
+    fi
+    if $FORCE; then
+        cleanup_flags="$cleanup_flags --force"
+    fi
+    "$DOTFILES_DIR/cleanup.sh" $cleanup_flags
 fi
 
 echo ""
