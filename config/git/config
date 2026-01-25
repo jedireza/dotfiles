@@ -13,4 +13,4 @@
 [push]
 	default = simple
 [core]
-	editor = /usr/bin/vim
+	editor = /opt/homebrew/bin/vim
