@@ -1,2 +1,3 @@
-# Local extras (not to be commited with git)
+# Local machine-specific config (not committed to git)
 .extra
+.zshrc.local
