@@ -13,6 +13,7 @@ DEPRECATED_FILES=(
     "$HOME/.bash_profile"
     "$HOME/.gitconfig"
     "$HOME/.tmux.conf"
+    "$HOME/.tern-config"
 )
 
 # Flags
