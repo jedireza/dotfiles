@@ -42,7 +42,7 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
-export LANG="en_US"
+export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 export LESS_TERMCAP_md="$ORANGE"
@@ -99,3 +99,4 @@ source <(kubectl completion zsh)
 # ==============================================================================
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -1,2 +1,5 @@
 .zshrc.local
 .vim/plugged
+config/gh/
+config/iterm2/
+config/cagent/
