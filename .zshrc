@@ -99,4 +99,10 @@ source <(kubectl completion zsh)
 # ==============================================================================
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/reza/.cache/lm-studio/bin"
+# End of LM Studio CLI section
+
