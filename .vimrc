@@ -164,6 +164,7 @@ set shiftwidth=4
 
 nnoremap <leader>jd :ALEGoToDefinition<CR>
 nnoremap <leader>ad :ALEDetail<CR>
+nnoremap <leader>hh :ALEHover<CR>
 
 let g:ale_set_highlights = 0
 let g:ale_completion_enabled = 0

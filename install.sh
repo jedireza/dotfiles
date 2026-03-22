@@ -60,10 +60,16 @@ backup() {
     fi
 }
 
-# Create symlink, backing up existing file first
+# Create symlink, backing up existing file first (skip if already correct)
 link() {
     local src="$1"
     local dest="$2"
+
+    # Already pointing to the right place — nothing to do
+    if [[ -L "$dest" && "$(readlink "$dest")" == "$src" ]]; then
+        echo "Already linked: $dest"
+        return
+    fi
 
     if $DRY_RUN; then
         if [[ -e "$dest" || -L "$dest" ]]; then
