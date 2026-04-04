@@ -1,0 +1,4 @@
+auto-update = off
+theme = Monokai Remastered
+background = #000000
+shell-integration-features = ssh-terminfo,ssh-env
